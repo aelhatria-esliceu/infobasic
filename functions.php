@@ -1,6 +1,10 @@
 <?php
 function infobasic_config(){
-    echo "EJECUTAMOS CONFIGURACION";
+    register_nav_menus(
+        array(
+            "infobasic_main_menu" => "info basic menú principal",
+        )
+    );
 }
 add_action("after_setup_theme","infobasic_config",0);
 function infobasic_scripts(){
