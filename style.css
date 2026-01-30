@@ -16,6 +16,7 @@ Text Domain: infobasic
     --main-color: rgb(226, 112, 5);
     --background-body: rgb(243, 182, 124);
     --text-color: rgb(53, 19, 4);
+    --text-color-active: rgb(168, 55, 7);
     --text-color-hover: rgb(247, 161, 82);
     --background-color-hover: rgb(39, 13, 1);
     --text-light-color: rgb(247, 161, 82);
@@ -23,4 +24,20 @@ Text Domain: infobasic
 
 body{
     background: var(--background-body);
+}
+
+.navbar{
+    background-color: var(--main-color);
+}
+
+.navbar-light .navbar-nav .nav-link{
+    color: var(--text-color);
+}
+
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+    color: var(--text-color-active);
+}
+
+.dropdown-menu{
+    background-color: var(--main-color);
 }

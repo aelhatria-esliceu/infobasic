@@ -8,7 +8,7 @@
 </head>
 <body <?php body_class(); ?>>
     <div class="cabecera">
-        <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <nav class="navbar navbar-expand-md navbar-light">
             <button class="navbar-toggler"
                 type="button"
                 data-toggle="collapse"
