@@ -11,3 +11,16 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: infobasic
 */
+
+:root{
+    --main-color: rgb(226, 112, 5);
+    --background-body: rgb(243, 182, 124);
+    --text-color: rgb(53, 19, 4);
+    --text-color-hover: rgb(247, 161, 82);
+    --background-color-hover: rgb(39, 13, 1);
+    --text-light-color: rgb(247, 161, 82);
+}
+
+body{
+    background: var(--background-body);
+}
