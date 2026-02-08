@@ -51,6 +51,12 @@ body{
     height: 400px;
 }
 
+.jumbo-front{
+    background-image: url(inc/img/Imagen\ \(4\).jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .jumbo-tienda{
     background-image: url(inc/img/Imagen\ \(1\).jpg);
     background-repeat: no-repeat;
@@ -67,4 +73,4 @@ body{
     background-image: url(inc/img/Imagen\ \(3\).jpg);
     background-repeat: no-repeat;
     background-size: cover;
-}
+} 
