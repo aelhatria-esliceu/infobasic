@@ -45,3 +45,26 @@ body{
 .dropdown-menu a:hover{
     background-color: var(--main-color);
 }
+
+.jumbotron{
+    color: var(--text-light-color);
+    height: 400px;
+}
+
+.jumbo-tienda{
+    background-image: url(inc/img/Imagen\ \(1\).jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.jumbo-jeans{
+    background-image: url(inc/img/Imagen\ \(2\).jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.jumbo-camisetas{
+    background-image: url(inc/img/Imagen\ \(3\).jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
