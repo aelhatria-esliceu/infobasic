@@ -13,17 +13,46 @@ Text Domain: infobasic
 */
 
 :root{
-    --main-color: rgb(226, 112, 5);
-    --background-body: rgb(243, 182, 124);
-    --text-color: rgb(53, 19, 4);
-    --text-color-active: rgb(168, 55, 7);
-    --text-color-hover: rgb(247, 161, 82);
-    --background-color-hover: rgb(39, 13, 1);
-    --text-light-color: rgb(247, 161, 82);
+    --main-color: rgb(21, 101, 192);
+    --background-body: rgb(236, 239, 241);
+    --text-color: rgb(33, 33, 33);
+    --text-color-hover: rgb(144, 202, 249);
+    --text-color-active: rgb(30, 136, 229);
+    --background-color-hover: rgb(13, 71, 161);
+    --text-light-color: rgb(224, 242, 255);
 }
 
 body{
     background: var(--background-body);
+}
+
+footer{
+    background-color: var(--main-color);
+    margin-top: 35px;
+    padding-top: 16px;
+    p{
+        color: var(--text-light-color);
+        font-size: large;
+    }
+    a{
+        color: var(--text-color);
+        text-decoration: none;
+    }
+    a:hover, a:focus{
+        color: var(--text-color-hover);
+        text-decoration: none;
+    }
+    a:active{
+        color: var(--text-color-active);
+        text-decoration: none;
+    }
+    ul{
+        list-style: none;
+        padding: 0;
+    }
+    li{
+        list-style: none;
+    }
 }
 
 .navbar{
@@ -32,18 +61,36 @@ body{
 
 .navbar-light .navbar-nav .nav-link{
     color: var(--text-color);
+    text-decoration: none;
 }
 
-.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+.navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus{
+    color: var(--text-color-hover);
+}
+
+.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link{
     color: var(--text-color-active);
 }
 
 .dropdown-menu{
     background-color: var(--main-color);
+    border: none;
 }
 
-.dropdown-menu a:hover{
-    background-color: var(--main-color);
+.dropdown-menu .dropdown-item{
+    color: var(--text-color);
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.dropdown-menu .dropdown-item:hover, .dropdown-menu .dropdown-item:focus{
+    color: var(--text-color-hover);
+    background-color: transparent;
+}
+
+.dropdown-menu .dropdown-item.active, .dropdown-menu .dropdown-item:active{
+    color: var(--text-color-active);
+    background-color: transparent;
 }
 
 .jumbotron{

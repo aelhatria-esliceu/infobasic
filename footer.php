@@ -2,8 +2,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <p>Ves al inicio</p>
-                <a href="home">Tienda</a>
+                <p>Vuelve al inicio</p>
+                <a href="home">Home</a>
             </div>
             <div class="col-md-3">
                 <?php
