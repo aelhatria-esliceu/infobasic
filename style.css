@@ -3,7 +3,7 @@
 Theme Name: Info Basic
 Theme URI: https://wordpress.org/themes/infobasic/
 Author: Ayman El Hatri
-Description: Tema WordPress infobasic de 2026, con el que aprendereis a crear vuestros temas. A partir de WordPress 6.9
+Description: Tema WordPress infobasic de 2026, con el que aprenderéis a crear vuestros temas. A partir de WordPress 6.9
 Requires at least: 4.7
 Requires PHP: 5.2.4
 Version: 1.0
@@ -12,6 +12,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: infobasic
 */
 
+/* =========================
+    VARIABLES BASE (DEFAULT)
+========================= */
 :root{
     --main-color: rgb(21, 101, 192);
     --background-body: rgb(236, 239, 241);
@@ -22,39 +25,58 @@ Text Domain: infobasic
     --text-light-color: rgb(224, 242, 255);
 }
 
+/* =========================
+    PALETAS POR JUEGO
+========================= */
+
+/* FRONT PAGE – tonos Hallownest */
+body.game-frontpage{
+    --main-color: rgb(90, 102, 115);
+    --background-body: rgb(240, 242, 245);
+    --text-color: rgb(45, 45, 50);
+    --text-color-hover: rgb(70, 80, 95);
+    --text-color-active: rgb(120, 130, 145);
+    --background-color-hover: rgb(200, 210, 220);
+    --text-light-color: rgb(230, 230, 235);
+}
+
+/* Hollow Knight – azul frío */
+body.game-hollow-knight{
+    --main-color: rgb(21, 101, 192);
+    --background-body: rgb(230, 236, 240);
+    --text-color-hover: rgb(144, 202, 249);
+    --text-color-active: rgb(30, 136, 229);
+    --background-color-hover: rgb(13, 71, 161);
+}
+
+/* Silksong – rojo intenso */
+body.game-silksong{
+    --main-color: rgb(183, 28, 28);
+    --background-body: rgb(248, 235, 235);
+    --text-color-hover: rgb(239, 154, 154);
+    --text-color-active: rgb(229, 57, 53);
+    --background-color-hover: rgb(136, 14, 14);
+}
+
+/* Sea of Sorrow – verde azulado marino */
+body.game-sea-of-sorrow{
+    --main-color: rgb(0, 105, 92);
+    --background-body: rgb(224, 242, 241);
+    --text-color-hover: rgb(128, 203, 196);
+    --text-color-active: rgb(0, 150, 136);
+    --background-color-hover: rgb(0, 77, 64);
+}
+
+/* =========================
+    BODY
+========================= */
 body{
     background: var(--background-body);
 }
 
-footer{
-    background-color: var(--main-color);
-    margin-top: 35px;
-    padding-top: 16px;
-    p{
-        color: var(--text-light-color);
-        font-size: large;
-    }
-    a{
-        color: var(--text-color);
-        text-decoration: none;
-    }
-    a:hover, a:focus{
-        color: var(--text-color-hover);
-        text-decoration: none;
-    }
-    a:active{
-        color: var(--text-color-active);
-        text-decoration: none;
-    }
-    ul{
-        list-style: none;
-        padding: 0;
-    }
-    li{
-        list-style: none;
-    }
-}
-
+/* =========================
+    NAVBAR
+========================= */
 .navbar{
     background-color: var(--main-color);
 }
@@ -62,16 +84,24 @@ footer{
 .navbar-light .navbar-nav .nav-link{
     color: var(--text-color);
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-.navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus{
-    color: var(--text-color-hover);
+.navbar-light .navbar-nav .nav-link:hover, 
+.navbar-light .navbar-nav .nav-link:focus{
+    color: var(--text-color-hover) !important;
 }
 
-.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link{
-    color: var(--text-color-active);
+.navbar-light .navbar-nav .nav-link.active, 
+.navbar-light .navbar-nav .active > .nav-link, 
+.navbar-light .navbar-nav .nav-link.show, 
+.navbar-light .navbar-nav .show > .nav-link{
+    color: var(--text-color-active) !important;
 }
 
+/* =========================
+    DROPDOWN MENU
+========================= */
 .dropdown-menu{
     background-color: var(--main-color);
     border: none;
@@ -83,45 +113,130 @@ footer{
     text-decoration: none;
 }
 
-.dropdown-menu .dropdown-item:hover, .dropdown-menu .dropdown-item:focus{
+.dropdown-menu .dropdown-item:hover, 
+.dropdown-menu .dropdown-item:focus{
     color: var(--text-color-hover);
     background-color: transparent;
 }
 
-.dropdown-menu .dropdown-item.active, .dropdown-menu .dropdown-item:active{
+.dropdown-menu .dropdown-item.active, 
+.dropdown-menu .dropdown-item:active{
     color: var(--text-color-active);
     background-color: transparent;
 }
 
+/* =========================
+    JUMBOTRON
+========================= */
 .jumbotron{
     color: var(--text-light-color);
     height: 400px;
 }
 
 .jumbo-front{
-    background-image: url(inc/img/Imagen\ \(4\).jpg);
+    background-image: url(inc/img/hollow-knight-cover_upscaled.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.jumbo-tienda{
-    background-image: url(inc/img/Imagen\ \(1\).jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+.jumbo-game{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
-.jumbo-jeans{
-    background-image: url(inc/img/Imagen\ \(2\).jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+.jumbo-game .overlay{
+    background-color: rgba(0,0,0,0.6);
+    padding: 40px;
+    border-radius: 12px;
 }
 
-.jumbo-camisetas{
-    background-image: url(inc/img/Imagen\ \(3\).jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+/* =========================
+    BOTONES PRIMARY POR PÁGINA
+========================= */
+body.game-frontpage .btn-primary,
+body.game-hollow-knight .btn-primary,
+body.game-silksong .btn-primary,
+body.game-sea-of-sorrow .btn-primary{
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+    color: var(--text-light-color);
+    transition: all 0.3s ease;
 }
 
+body.game-frontpage .btn-primary:hover,
+body.game-hollow-knight .btn-primary:hover,
+body.game-silksong .btn-primary:hover,
+body.game-sea-of-sorrow .btn-primary:hover{
+    background-color: var(--background-color-hover);
+    border-color: var(--background-color-hover);
+}
+
+/* ======== NUEVO: efecto al hacer clic ======= */
+body.game-frontpage .btn-primary:active,
+body.game-hollow-knight .btn-primary:active,
+body.game-silksong .btn-primary:active,
+body.game-sea-of-sorrow .btn-primary:active{
+    background-color: var(--text-color-active);
+    border-color: var(--text-color-active);
+    color: var(--text-light-color);
+}
+
+/* =========================
+    CARDS
+========================= */
+.card{
+    border: none;
+}
+
+.card-body{
+    background-color: white;
+}
+
+/* =========================
+    FOOTER
+========================= */
+footer{
+    background-color: var(--main-color);
+    margin-top: 35px;
+    padding-top: 16px;
+}
+
+footer p{
+    color: var(--text-color);
+    font-size: large;
+    font-weight: bold;
+}
+
+footer a{
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+footer a:hover, footer a:focus{
+    color: var(--text-color-hover);
+    text-decoration: none;
+}
+
+footer a:active{
+    color: var(--text-color-active);
+    text-decoration: none;
+}
+
+footer ul{
+    list-style: none;
+    padding: 0;
+}
+
+footer li{
+    list-style: none;
+}
+
+/* =========================
+    IMÁGENES
+========================= */
 .container img{
     width: 100%;
 }
